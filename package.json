@@ -10,7 +10,7 @@
     "dev:dev": "esbuild scripts/sdk.tsx --bundle --sourcemap --target=es6 --outfile=public/my-sdk.js --watch",
     "build:get-version": "node -e 'const SDK_VERSION = require(\"./scripts/VERSION.js\"); process.stdout.write(SDK_VERSION)' > .version",
     "build:build": "esbuild scripts/sdk.tsx --bundle --minify --target=es6 --outfile=build/my-sdk.$(cat .version).js",
-    "build:copy": "cp build/my-sdk.$(cat .version).js build/my-sdk.latest.min.js && cp build/my-sdk.$(cat .version).js public/my-sdk.latest.min.js && cp build/my-sdk.$(cat .version).js public/my-sdk.$(cat .version).js",
+    "build:copy": "cp -f build/my-sdk.$(cat .version).js build/my-sdk.latest.min.js && cp -f build/my-sdk.$(cat .version).js public/my-sdk.latest.min.js && cp -f build/my-sdk.$(cat .version).js public/my-sdk.$(cat .version).js",
     "build:clean": "rm .version"
   },
   "dependencies": {

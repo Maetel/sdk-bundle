@@ -25,7 +25,7 @@
     <script>
       console.log("SDK Version : ", MySDK.version);
       if (MySDK.version) {
-        const sdk = new MySDK("sdk-root");
+        const sdk = new MySDK("sdk-root"); // renders to Div with id="sdk-root"
         sdk.apiKey = "some-api-key";
         sdk.videoSrc =
           "https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4";
