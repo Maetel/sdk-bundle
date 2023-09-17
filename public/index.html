@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MySDK Debugging</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top center">
+        <div class="top-item center left">Top left</div>
+        <div id="sdk-root" class="top-item center right">
+          Top right (Render failed)
+        </div>
+      </div>
+      <div class="bottom center">Bottom</div>
+    </div>
+
+    <!-- dev -->
+    <script src="my-sdk.js"></script>
+
+    <!-- prod -->
+    <!-- <script src="my-sdk.latest.min.js"></script> -->
+    <script>
+      console.log("SDK Version : ", MySDK.version);
+      if (MySDK.version) {
+        const sdk = new MySDK("sdk-root");
+        sdk.apiKey = "some-api-key";
+        sdk.videoSrc =
+          "https://archive.org/download/SampleVideo1280x7205mb/SampleVideo_1280x720_5mb.mp4";
+        sdk.render();
+      } else {
+        console.error("MySDK is not defined.");
+      }
+    </script>
+  </body>
+</html>

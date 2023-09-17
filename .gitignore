@@ -1,18 +1,11 @@
-dist/
-public/
-build/
+package-lock.json
+public/*.js*
 
 # Dependency directories
 node_modules/
 
-# Optional, if you use npm's built-in package-lock.json:
-package-lock.json
-
-# Optional, if you use yarn:
-yarn.lock
-
 # Environment variables
-.env
+.env*
 
 # Build artifacts
 /dist/

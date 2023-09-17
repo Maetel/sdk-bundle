@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "ES6",
     "target": "ES5",
     "jsx": "react",
@@ -8,7 +9,9 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["components/*"]
+      "@/*": ["components/*"],
+      "@scripts/*": ["scripts/*"],
+      "@types/*": ["types/*"]
     }
   }
 }
