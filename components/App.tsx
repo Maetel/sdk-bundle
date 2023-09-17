@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import Hi from "@/Hi";
+
 const App = () => {
   useEffect(() => {
     const call = async () => {
@@ -7,7 +9,11 @@ const App = () => {
     call();
   }, []);
 
-  return <div>Hello from MySDK!</div>;
+  return (
+    <div>
+      Hello from MySDK!<Hi></Hi>
+    </div>
+  );
 };
 
 export default App;
