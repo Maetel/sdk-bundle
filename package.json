@@ -1,0 +1,19 @@
+{
+  "name": "my-sdk",
+  "version": "1.0.0",
+  "description": "My SDK for 3rd parties",
+  "main": "dist/my-sdk.min.js",
+  "scripts": {
+    "dev": "esbuild ./src/index.tsx --bundle --sourcemap --target=es6 --outfile=dist/my-sdk.js --watch",
+    "build": "esbuild src/index.tsx --bundle --minify --target=es6 --outfile=dist/my-sdk.min.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "esbuild": "^0.19.3",
+    "typescript": "^5.2.2"
+  }
+}

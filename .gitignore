@@ -1,0 +1,35 @@
+dist/
+public/
+build/
+
+# Dependency directories
+node_modules/
+
+# Optional, if you use npm's built-in package-lock.json:
+package-lock.json
+
+# Optional, if you use yarn:
+yarn.lock
+
+# Environment variables
+.env
+
+# Build artifacts
+/dist/
+/build/
+/out/
+
+# Logs and debugging files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor and IDE specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db
