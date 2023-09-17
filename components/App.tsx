@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Hi from "@/Hi";
 
+
 const App = () => {
   useEffect(() => {
     const call = async () => {
